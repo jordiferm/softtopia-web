@@ -1,15 +1,210 @@
 @(title: String)(content: Html)
 
 <!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 
-<html>
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
-    </head>
-    <body>
-        @content
-    </body>
+<head>
+
+    <meta charset="utf-8">
+    <title>@title</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+    <!-- For Mobiles  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/wide.css")" id="layout">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/style.css")">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/colors/default.css")" id="colors">
+
+    <!-- Java Script  -->
+    <script src="@routes.Assets.at("javascripts/jquery.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/custom.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/selectnav.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/flexslider.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/twitter.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/fancybox.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/isotope.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/bootstrap.js")" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- Wrapper Start -->
+<div id="wrapper" class="container-fluid">
+
+    <!-- Header -->
+    <div class="ie-dropdown-fix" >
+        <!-- Header -->
+        <div class="row-fluid" id="header">
+            <!-- Logo -->
+            <div class="span5">
+                <a href="#"><img src="assets/images/logo.png" alt="logo" /></a>
+            </div>
+
+            <!-- Social / Contact -->
+            <div class="span4 pull-right">
+                <!-- Social Icons -->
+                <ul class="social-icons">
+                    <li class="facebook"><a href="http://www.facebook.com/jordi.fernandez.3597">Facebook</a></li>
+                    <li class="twitter"><a href="http://witter.com/jordiferm">Twitter</a></li>
+                    <li class="linkedin"><a href="http://es.linkedin.com/pub/jordi-fern%C3%A0ndez/1b/675/5/">LinkedIn</a></li>
+                    <li class="pintrest"><a href="http://pinterest.com/jordifm/">Pintrest</a></li>
+                    <li class="googleplus"><a href="http://plus.google.com/u/0/101299402231531231596"></a></li>
+                    <!--<li class="delicious"><a href="http://delicious.com/jordifm"></a><i>-->
+                    <li class="evernote"><a href="http://www.evernote.com/pub/jordiferm/public"></a><li>
+                    <li class="skype"><a href="skype:jordi.softtopia?call"></a><li>
+                </ul>
+
+                <!-- Contact Details -->
+                <div id="contact-top">
+                    <ul>
+                        <li><i class="icon-envelope"></i><a href="#">j@@softtopia.com</a></li>
+                        <li><i class="icon-user"></i>+34 633 271 065</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Header / End -->
+
+        <!-- Navigation -->
+        <div id="navigation" class="margintop">
+            <ul id="nav">
+
+                <li><a href="/" class="active">Home</a></li>
+
+                <li><a href="#">About Me</a>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Background</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Projects</a>
+                    <ul>
+                        <li><a href="#">Aili Image</a></li>
+                        <li><a href="#">HelpMeProject</a></li>
+                        <li><a href="#">arc-tecno manager</a></li>
+                        <li><a href="#">Printer drivers</a></li>
+                        <li><a href="#">Movile apps</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Portfolio</a>
+                    <ul>
+                        <li><a href="#">2 Columns</a></li>
+                        <li><a href="#">3 Columns</a></li>
+                        <li><a href="#">4 Columns</a></li>
+                        <li><a href="#">Single Project</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="blog.html">Technologies</a>
+                    <ul>
+                        <li><a href="#">Qt</a></li>
+                        <li><a href="#">WPF</a></li>
+                        <li><a href="#">Play framework</a></li>
+                        <li><a href="#">.NET</a></li>
+                        <li><a href="#">Android</a></li>
+                    </ul></li>
+
+                <li><a href="@routes.Application.contact">Contact</a></li>
+
+                <li><a href="blog.html">Blog</a>
+                    <ul>
+                        <li><a href="blog_post.html">Single Post</a></li>
+                    </ul></li>
+
+                <li><a href="@routes.Application.contact">Contact</a></li>
+            </ul>
+
+        </div>
+        <div class="nav-shadow"></div>
+        <div class="clear"></div>
+
+    </div>
+    <!-- Navigation / End -->
+
+    <!-- Content -->
+    @content
+
+
+    <!-- Footer -->
+
+    <!-- Footer Top -->
+    <div id="footer" class="container-fluid paddingbottom" >
+
+
+        <div class="row-fluid">
+
+            <!-- About -->
+            <div class="span3">
+                <div class="footer-headline"><h4>About Us</h4></div>
+                <p>Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</p>
+                <img src="images/logo.png" class="client-logo">
+            </div>
+
+            <!-- Subscribe  -->
+            <div class="span3">
+                <div class="footer-headline"><h4>Subscribe</h4></div>
+                <p>Keep updated with our news</p><p>Your email is safe with us!</p>
+                <div class="input-append">
+                    <input  id="appendedInputButton"  type="text" class="span7" placeholder="Enter Email Address">
+                    <button class="btn" type="button">Subscribe!</button>
+                </div>
+            </div>
+
+            <!-- Photo Stream -->
+            <div class="span3">
+                <div class="footer-headline"><h4>Photo Stream</h4></div>
+                <div class="flickr-widget">
+                    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=26662207@@N00"></script>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <!-- Latest Tweets -->
+            <div class="span3">
+                <div class="footer-headline"><h4>Latest Tweets</h4></div>
+                <ul id="twitter"></ul>
+                <script type="text/javascript">
+                    jQuery(document).ready(function($){
+                    $.getJSON('http://api.twitter.com/1/statuses/user_timeline/jordiferm.json?count=2&amp;callback=?', function(tweets){
+                    $("#twitter").html(tz_format_twitter(tweets));
+                    }); });
+                </script>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer / Bottom -->
+    <div id="footer" class="container-fluid" style="background: #111;">
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="footer-bottom">
+                    © Copyright 2012 by <a href="#">Softtopia</a>. All rights reserved.
+
+                    <div id="scroll-top-top"><a href="#" title="Go to Top"></a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer / End -->
+</div>
+</body>
+
 </html>
